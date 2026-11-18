@@ -197,19 +197,3 @@ Essa parte só funciona com placas NVIDIA e com o comando `nvidia-smi` instalado
 
 **Clima ou cotações mostram "sem conexão".**
 Verifique a internet e clique no botão 🔄 da seção.
-
----
-
-## 📜 Créditos e licença
-
-- Ícone do robô: `lucide-bot` do [Lucide](https://lucide.dev) (ISC), na versão do tema [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) (GPL-3.0).
-- Dados de clima por [Open-Meteo](https://open-meteo.com/) e de cotações por [AwesomeAPI](https://docs.awesomeapi.com.br/).
-- Código licenciado sob a **[GPL-3.0](LICENSE)**: use, estude, modifique e compartilhe.
-
-<div align="center">
-
-<br>
-
-Feito com 💜 no Brasil
-
-</div>

@@ -1,0 +1,3 @@
+kimi-robo-symbolic.svg
+  Ícone "bot" do Lucide (https://lucide.dev) — licença ISC,
+  na versão do tema Papirus (https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) — licença GPL-3.0.
