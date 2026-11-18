@@ -106,8 +106,12 @@ class KimiButton extends PanelMenu.Button {
         return b;
     }
 
-    _botaoTexto(icone, texto, classe, aoClicar) {
+    _botaoTexto(icone, texto, classe, aoClicar, esquerda = false) {
         const conteudo = new St.BoxLayout({style_class: 'kimi-btn-conteudo'});
+        if (esquerda) {
+            conteudo.x_expand = true;
+            conteudo.x_align = Clutter.ActorAlign.START;
+        }
         conteudo.add_child(new St.Icon({icon_name: icone, icon_size: 14}));
         conteudo.add_child(new St.Label({text: texto, y_align: CENTRO}));
         const b = new St.Button({style_class: classe, child: conteudo, can_focus: true});
@@ -142,7 +146,7 @@ class KimiButton extends PanelMenu.Button {
     _construirLateral() {
         this._botoesSecao = new Map();
         for (const secao of SECOES) {
-            const conteudo = new St.BoxLayout({style_class: 'kimi-side-conteudo'});
+            const conteudo = new St.BoxLayout({style_class: 'kimi-side-conteudo', x_expand: true, x_align: Clutter.ActorAlign.START});
             conteudo.add_child(new St.Icon({icon_name: secao.icone, icon_size: 16}));
             conteudo.add_child(new St.Label({text: secao.nome, y_align: CENTRO}));
             const botao = new St.Button({style_class: 'kimi-side-btn', child: conteudo, can_focus: true, x_expand: true});
@@ -152,7 +156,7 @@ class KimiButton extends PanelMenu.Button {
         }
         this._lateral.add_child(new St.Widget({y_expand: true}));
         this._lateral.add_child(this._botaoTexto('folder-documents-symbolic', 'Abrir pasta', 'kimi-side-btn kimi-side-pasta',
-            () => this._abrirPasta(L.pastaKimi())));
+            () => this._abrirPasta(L.pastaKimi()), true));
     }
 
     _mostrarSecao(id) {
@@ -888,7 +892,7 @@ class KimiButton extends PanelMenu.Button {
         }
         for (const nota of notas) {
             const classes = nota.caminho === this._notaAtual ? 'kimi-nota-item kimi-nota-ativa' : 'kimi-nota-item';
-            const conteudo = this._coluna('kimi-nota-item-conteudo');
+            const conteudo = new St.BoxLayout({orientation: VERTICAL, style_class: 'kimi-nota-item-conteudo', x_expand: true, x_align: Clutter.ActorAlign.START});
             conteudo.add_child(new St.Label({text: nota.titulo, style_class: 'kimi-nota-item-titulo'}));
             const data = GLib.DateTime.new_from_unix_local(nota.modificado);
             conteudo.add_child(new St.Label({text: data.format('%d/%m · %H:%M'), style_class: 'kimi-nota-item-data'}));
