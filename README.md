@@ -2,6 +2,18 @@
 
 O **Kimi** é um painel que fica no centro da barra superior do GNOME. Ao clicar, abre uma janela com barra lateral e várias seções úteis para o dia a dia, em português do Brasil.
 
+![Kimi: relógio e relógio mundial](screenshots/01-relogio.png)
+
+## Capturas de tela
+
+| 📅 Calendário com feriados | ⛅ Clima em São Paulo |
+|---|---|
+| ![Calendário](screenshots/02-calendario.png) | ![Clima](screenshots/03-clima.png) |
+| **💲 Cotações** | **📊 Monitor do PC** |
+| ![Cotações](screenshots/04-cotacoes.png) | ![Monitor](screenshots/05-monitor.png) |
+| **🔕 Modo foco** | **📝 Notas** |
+| ![Modo foco](screenshots/06-foco.png) | ![Notas](screenshots/07-notas.png) |
+
 ## Seções
 
 | Seção | O que faz |
