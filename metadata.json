@@ -1,0 +1,11 @@
+{
+  "uuid": "kimi@local",
+  "name": "Kimi",
+  "description": "Relógio, calendário com feriados do Brasil, clima, cotações, monitor do PC, modo foco e notas na barra superior.",
+  "shell-version": [
+    "50",
+    "51"
+  ],
+  "version": 1,
+  "url": "https://github.com/Gabriel-Moreira-Valverde/kimi-gnome-extension"
+}
